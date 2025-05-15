@@ -1,12 +1,12 @@
-citHeader("To cite {LSGARCH} package in publications use:")
+citHeader("To cite {tvGarchKF} package in publications use:")
 
 bibentry(
   bibtype  = "Manual",
-  title    = "LSGARCH",
+  title    = "tvGarchKF",
   author   = c(
   person("Guillermo", "Ferreira"),
   person("Tomás", "Arancibia")
   ),
   year     = 2025,
-  url      = "https://github.com/Tomas-UDEC/LSGARCH",
+  url      = "https://github.com/Tomas-UDEC/tvGarchKF",
 )

@@ -3,7 +3,7 @@
 #include <R_ext/BLAS.h>
 #include <Rinternals.h>
 
-void LSgarch1ab(int *nsample, double *a, double *b, double *C, double *P, double *X, double *F, double *K, double *y) {
+void tvGarch1ab(int *nsample, double *a, double *b, double *C, double *P, double *X, double *F, double *K, double *y) {
     //    double a=*A;
     //    double b=*B;
         double c = *C;
@@ -27,7 +27,7 @@ void LSgarch1ab(int *nsample, double *a, double *b, double *C, double *P, double
         }
     }
 }
-void LSgarch1ab2(int *nsample, double *a, double *b, double *c, double *P, double *X, double *F, double *K, double *y) {
+void tvGarch1ab2(int *nsample, double *a, double *b, double *c, double *P, double *X, double *F, double *K, double *y) {
     //    double a=*A;
     //    double b=*B;
     //    double c=*C;
@@ -52,11 +52,11 @@ void LSgarch1ab2(int *nsample, double *a, double *b, double *c, double *P, doubl
     }
 }
 static const R_CMethodDef CEntries[] = {
-    {"LSgarch1ab", (DL_FUNC)&LSgarch1ab, 9},
-    {"LSgarch1ab2", (DL_FUNC)&LSgarch1ab2, 9},
+    {"tvGarch1ab", (DL_FUNC)&tvGarch1ab, 9},
+    {"tvGarch1ab2", (DL_FUNC)&tvGarch1ab2, 9},
     {NULL, NULL, 0}
 };
-void R_init_LSGARCH(DllInfo* dll) {
+void R_init_tvGarchKF(DllInfo* dll) {
     R_registerRoutines(dll, CEntries, NULL, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }

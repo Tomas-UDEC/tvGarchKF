@@ -1,14 +1,14 @@
-Package: LSGARCH
-Date: 2025-01-29
+Package: tvGarchKF
+Date: 2025-05-06
 Type: Package
-Title: Estimate parameters of Locally Stationary tvGarch models, applying Kalman Filter and use Space-State equations
+Title: Estimation and prediction of time-varying Garch models through a state-space representation
 Version: 0.0.1
 Authors@R: c(person("Guillermo", "Ferreira", role = "aut",
-                    email = "gferreri@udec.cl"),
+                    email = "gferreir@udec.cl"),
             person("Tomás", "Arancibia", role = c("aut", "cre"),
                     email = "tarancibia2016@udec.cl"))
 Maintener: Tomás Arancibia <tarancibia2016@udec.cl>
-Description: Estima los parametros tvgarch aplicando metodologia localmente estacionario, aplicando filtro de Kalman y ecuaciones de espacio-estado para el ajuste de los coeficientes. Permite el ajuste de los parametros para distintos tipos de funciones en los parametros c, a y b. La metodologia se basa en el enfoque descrito en Ferreira et al. (2017).
+Description: This package estimates the time-varying (tv) parameters of the GARCH(1,1) model, enabling the modeling of non-stationary volatilities by allowing the model parameters to change gradually over time. The estimation and prediction processes are facilitated through the application of the Kalman filter and state-space equations. This package supports the estimation of tv parameters for various deterministic functions, which can be identified through exploratory analysis of different time periods or segments of return data. The methodology is grounded in the framework presented by Ferreira et al. (2017).
 Reference: Guillermo Ferreira, Jean P. Navarrete, Francisco J. Rodríguez-Cortés & Jorge Mateu (2017) Estimation and prediction of time-varying GARCH models through a state-space representation: a computational approach, Journal of Statistical Computation and Simulation, 87:12, 2430-2449, DOI: 10.1080/00949655.2017.1334778
 License: GPL (>= 3)
 Encoding: UTF-8

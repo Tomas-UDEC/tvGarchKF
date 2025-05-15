@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(LSGARCH)
+library(tvGarchKF)
 
-test_check("LSGARCH")
+test_check("tvGarchKF")
