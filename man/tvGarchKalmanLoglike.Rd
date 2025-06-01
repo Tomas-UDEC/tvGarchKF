@@ -16,7 +16,7 @@ tvGarchKalmanLoglike(
   trig,
   arg,
   predict,
-  trace.log = F
+  trace.log = FALSE
 )
 }
 \arguments{

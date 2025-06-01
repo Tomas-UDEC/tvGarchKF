@@ -14,7 +14,7 @@ tvGarchKalmanFit(
   trig,
   arg,
   predict = 0,
-  trace.log = F
+  trace.log = FALSE
 )
 }
 \arguments{
@@ -43,7 +43,7 @@ Return fit values of omega, alpha and beta
 }
 \description{
 The tv-Garch(1,1) model, the parameters vary slowly over time according to linear or non-linear functions.
-These parameters are denoted by c(t), α(t) and β(t) which correspond to the model
+These parameters are denoted by \eqn{c(t)}, \eqn{\alpha(t)} and \eqn{\beta(t)} which correspond to the model
 \eqn{\sigma_t = c(t) +\alpha(t) r^2_{t-1} +\beta(t)\sigma_{t-1}}.
 }
 \details{
@@ -65,7 +65,6 @@ For the trigonometric case, it is as follows:
 where \eqn{g(u)} it is a trigonometric function, \eqn{cos} or \eqn{sin}.
 }
 \examples{
-data(Ipsa)
 ipsa<-diff(log(indipsa))
 c <- c(0.05,0.05)
 alpha <- c(0.05,0.05)

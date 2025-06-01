@@ -15,7 +15,7 @@ tvGarchKalmanPrint(
   exponentes,
   trig,
   arg,
-  trace.log = F,
+  trace.log = FALSE,
   predict
 )
 }

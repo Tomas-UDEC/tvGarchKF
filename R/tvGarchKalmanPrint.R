@@ -35,7 +35,7 @@
 #' plot(ipsa,ylab="",xlim=c(2000,2015))
 #' lines(ts(model$sigma, star=2000, freq=225), col="red", lwd=2)
 #' lines(ts(model$sigma*(-1), star=2000, freq=225), col="red", lwd=2)
-tvGarchKalmanPrint <- function(x, series, c, alpha, beta, nsample=length(series), type=c("polynomial","NoLineal","trigonometric"), exponentes, trig, arg, trace.log=F, predict){
+tvGarchKalmanPrint <- function(x, series, c, alpha, beta, nsample=length(series), type=c("polynomial","NoLineal","trigonometric"), exponentes, trig, arg, trace.log=FALSE, predict){
 
   pred<-rep(NA,predict)
   series<-c(series,pred)

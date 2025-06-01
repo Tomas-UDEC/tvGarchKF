@@ -15,7 +15,7 @@
 #' @return Value of loglike in model.
 #' @importFrom stats na.exclude
 #' @export
-tvGarchKalmanLoglike <- function(x, series, c, alpha, beta, nsample=length(series), type=c("polynomial","NoLineal","trigonometric"), exponentes, trig, arg, predict, trace.log=F){
+tvGarchKalmanLoglike <- function(x, series, c, alpha, beta, nsample=length(series), type=c("polynomial","NoLineal","trigonometric"), exponentes, trig, arg, predict, trace.log=FALSE){
 
   pred<-rep(NA,predict)
   series<-c(series,pred)

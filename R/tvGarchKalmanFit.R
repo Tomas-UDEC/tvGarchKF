@@ -1,6 +1,6 @@
 #' @title Fit the time-varying (Tv) parameters of the GARCH model (tv-Garch) by using the Kalman Filter method. The tv-parameters are determined by deterministic functions of either linear or non-linear type.
 #' @description The tv-Garch(1,1) model, the parameters vary slowly over time according to linear or non-linear functions.
-#' These parameters are denoted by c(t), α(t) and β(t) which correspond to the model
+#' These parameters are denoted by \eqn{c(t)}, \eqn{\alpha(t)} and \eqn{\beta(t)} which correspond to the model
 #' \eqn{\sigma_t = c(t) +\alpha(t) r^2_{t-1} +\beta(t)\sigma_{t-1}}.
 #' @param series Time series.
 #' @param c Vector containing coefficents of c.
@@ -34,7 +34,6 @@
 #' \deqn{\beta(t) = b_0 + b_1 g(u),}
 #' where \eqn{g(u)} it is a trigonometric function, \eqn{cos} or \eqn{sin}.
 #' @examples
-#' data(Ipsa)
 #' ipsa<-diff(log(indipsa))
 #' c <- c(0.05,0.05)
 #' alpha <- c(0.05,0.05)
@@ -42,7 +41,7 @@
 #' type_fit <- c("trigonometric","trigonometric","trigonometric")
 #' fit<-tvGarchKalmanFit(ipsa,c=c,alpha=alpha,beta=beta,type=type_fit,trig="cos",arg="3*(1-log(u))")
 
-tvGarchKalmanFit <- function(series, c, alpha, beta, type=c("polynomial","NoLineal","trigonometric"), exponentes, trig, arg, predict = 0, trace.log=F){
+tvGarchKalmanFit <- function(series, c, alpha, beta, type=c("polynomial","NoLineal","trigonometric"), exponentes, trig, arg, predict = 0, trace.log=FALSE){
   checkInput(type)
   pars = c(c, alpha, beta)
   if(!missing(predict)){
